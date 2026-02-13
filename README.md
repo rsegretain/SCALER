@@ -30,3 +30,7 @@
 
 Experiments results data are available at the following link while paper is under review and will be uploaded to proper scientific platform if/when the paper is accepted :
 - [https://www.grosfichiers.com/2ZXAgwg2cHD](https://www.grosfichiers.com/2ZXAgwg2cHD)
+
+# Load generator
+
+wrk3, the HTTP requests generator is available here : [https://open-science.anonymous-github.xyz/r/wrk3-7444](https://open-science.anonymous-github.xyz/r/wrk3-7444)

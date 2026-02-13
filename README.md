@@ -1,3 +1,5 @@
+# Smart Group Scaling for Webscale Microservice Applications
+
 # Files structure
 
 - global-resources

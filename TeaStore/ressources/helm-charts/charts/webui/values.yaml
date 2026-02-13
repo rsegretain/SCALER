@@ -1,0 +1,13 @@
+container:
+  image: teastore-webui:latest
+  port: 8080
+  env:
+  - name: HOST_NAME
+    value: "teastore-webui"
+  - name: REGISTRY_HOST
+    value: "teastore-registry"
+  startupProbe:
+    endpoint: /tools.descartes.teastore.webui/rest/ready/isready
+
+serviceType: NodePort
+nodePort: 30080

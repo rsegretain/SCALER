@@ -1,0 +1,4 @@
+apiVersion: v2
+name: image
+version: 1.4.2
+type: application

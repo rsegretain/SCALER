@@ -1,0 +1,10 @@
+container:
+  image: teastore-auth:latest
+  port: 8080
+  env:
+  - name: HOST_NAME
+    value: "teastore-auth"
+  - name: REGISTRY_HOST
+    value: "teastore-registry"
+  startupProbe:
+    endpoint: /tools.descartes.teastore.auth/rest/ready/isready

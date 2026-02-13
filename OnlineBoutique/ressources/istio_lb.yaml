@@ -1,0 +1,108 @@
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: adservice-lb
+spec:
+  host: "adservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: cartservice-lb
+spec:
+  host: "cartservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: checkoutservice-lb
+spec:
+  host: "checkoutservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: currencyservice-lb
+spec:
+  host: "currencyservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: emailservice-lb
+spec:
+  host: "emailservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: paymentservice-lb
+spec:
+  host: "paymentservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: productcatalogservice-lb
+spec:
+  host: "productcatalogservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: recommendationservice-lb
+spec:
+  host: "recommendationservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: shippingservice-lb
+spec:
+  host: "shippingservice.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 60s
+

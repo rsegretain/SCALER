@@ -1,0 +1,39 @@
+kubernetes:
+  kubeadm_config: |
+    apiVersion: kubeadm.k8s.io/v1beta3
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        housekeeping-interval: 5s
+  kubeadm_join_config: |
+    apiVersion: kubeadm.k8s.io/v1beta3
+    kind: JoinConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        housekeeping-interval: 5s
+  control_plane:
+    kubernetes:
+      version: v1.30.0
+    coredns:
+      version: v1.11.1
+    etcd:
+      version: 3.5.12-0
+  network:
+    network_plugin: weave
+  apps:
+    prometheus_stack:
+      version: 65.1.1
+      namespace: monitoring
+      schedule_on_control_plane: true
+      helm_values: |
+        alertmanager:
+          enabled: false
+        prometheus:
+          prometheusSpec:
+            scrapeInterval: 5s
+    ingress_nginx:
+      enabled: true
+      version: 4.11.2
+      namespace: ingress-nginx
+      schedule_on_control_plane: true
+      ingress_ip_source: node_internal_ip

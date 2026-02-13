@@ -1,0 +1,30 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prometheus-oper-istio-controlplane
+  namespace: monitoring
+  labels:
+    release: kube-prometheus-stack
+spec:
+  jobLabel: istio
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: [istiod, mixer, pilot, galley, citadel, sidecar-injector]
+  namespaceSelector:
+    matchNames:
+      - istio-system
+  endpoints:
+    - port: http-monitoring
+      interval: 5s
+      relabelings:
+        - sourceLabels: [__meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+          action: keep
+          regex: (istiod|mixer|pilot|galley|citadel|sidecar-injector);http-monitoring
+    - port: http-policy-monitoring
+      interval: 5s
+      relabelings:
+        - sourceLabels: [__meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+          action: keep
+          regex: (istiod|mixer|pilot|galley|citadel|sidecar-injector);http-policy-monitoring;http-monitoring

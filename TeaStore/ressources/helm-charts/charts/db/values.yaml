@@ -1,0 +1,4 @@
+container:
+  image: teastore-db:latest
+  port: 3306
+  cpu: "8"

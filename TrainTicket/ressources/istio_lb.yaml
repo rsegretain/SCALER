@@ -1,0 +1,504 @@
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-admin-basic-info-service-lb
+spec:
+  host: "ts-admin-basic-info-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-admin-order-service-lb
+spec:
+  host: "ts-admin-order-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-admin-route-service-lb
+spec:
+  host: "ts-admin-route-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-admin-travel-service-lb
+spec:
+  host: "ts-admin-travel-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-admin-user-service-lb
+spec:
+  host: "ts-admin-user-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-assurance-service-lb
+spec:
+  host: "ts-assurance-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-auth-service-lb
+spec:
+  host: "ts-auth-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-avatar-service-lb
+spec:
+  host: "ts-avatar-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-basic-service-lb
+spec:
+  host: "ts-basic-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-cancel-service-lb
+spec:
+  host: "ts-cancel-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-config-service-lb
+spec:
+  host: "ts-config-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-consign-price-service-lb
+spec:
+  host: "ts-consign-price-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-consign-service-lb
+spec:
+  host: "ts-consign-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-contacts-service-lb
+spec:
+  host: "ts-contacts-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-execute-service-lb
+spec:
+  host: "ts-execute-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-food-map-service-lb
+spec:
+  host: "ts-food-map-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-food-service-lb
+spec:
+  host: "ts-food-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-inside-payment-service-lb
+spec:
+  host: "ts-inside-payment-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-news-service-lb
+spec:
+  host: "ts-news-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-notification-service-lb
+spec:
+  host: "ts-notification-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-order-other-service-lb
+spec:
+  host: "ts-order-other-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-order-service-lb
+spec:
+  host: "ts-order-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-payment-service-lb
+spec:
+  host: "ts-payment-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-preserve-other-service-lb
+spec:
+  host: "ts-preserve-other-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-preserve-service-lb
+spec:
+  host: "ts-preserve-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-price-service-lb
+spec:
+  host: "ts-price-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-rebook-service-lb
+spec:
+  host: "ts-rebook-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-route-plan-service-lb
+spec:
+  host: "ts-route-plan-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-route-service-lb
+spec:
+  host: "ts-route-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-seat-service-lb
+spec:
+  host: "ts-seat-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-security-service-lb
+spec:
+  host: "ts-security-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-station-service-lb
+spec:
+  host: "ts-station-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-ticketinfo-service-lb
+spec:
+  host: "ts-ticketinfo-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-ticket-office-service-lb
+spec:
+  host: "ts-ticket-office-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-train-service-lb
+spec:
+  host: "ts-train-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-travel2-service-lb
+spec:
+  host: "ts-travel2-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-travel-plan-service-lb
+spec:
+  host: "ts-travel-plan-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-travel-service-lb
+spec:
+  host: "ts-travel-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-user-service-lb
+spec:
+  host: "ts-user-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-verification-code-service-lb
+spec:
+  host: "ts-verification-code-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-voucher-mysql-lb
+spec:
+  host: "ts-voucher-mysql.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: ts-voucher-service-lb
+spec:
+  host: "ts-voucher-service.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+

@@ -1,0 +1,19 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  name: istio-control-plane
+  namespace: istio-system
+spec:
+  meshConfig:
+    defaultConfig:
+      proxyStatsMatcher:
+        inclusionRegexps:
+          - ".*downstream_rq.*"
+          - ".*downstream_cx.*"
+          - ".*upstream_rq_retry.*"
+          - ".*upstream_cx_.*"
+          - ".*outlier_detection.*"
+          - ".*custom_logger.*"
+          - ".*lua.*"
+        inclusionSuffixes:
+          - "upstream_rq_timeout"

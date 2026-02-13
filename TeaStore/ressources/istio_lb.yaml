@@ -1,0 +1,45 @@
+#apiVersion: networking.istio.io/v1alpha3
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: teastore-auth-lb
+spec:
+  host: "teastore-auth.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: teastore-persistence-lb
+spec:
+  host: "teastore-persistence.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: teastore-image-lb
+spec:
+  host: "teastore-image.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s
+---
+apiVersion: networking.istio.io/v1
+kind: DestinationRule
+metadata:
+  name: teastore-recommender-lb
+spec:
+  host: "teastore-recommender.default.svc.cluster.local"
+  trafficPolicy:
+    loadBalancer:
+      simple: LEAST_REQUEST
+      warmupDurationSecs: 120s

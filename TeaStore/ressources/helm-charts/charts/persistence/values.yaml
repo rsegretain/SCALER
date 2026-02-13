@@ -1,0 +1,14 @@
+container:
+  image: teastore-persistence:latest
+  port: 8080
+  env:
+  - name: HOST_NAME
+    value: "teastore-persistence"
+  - name: REGISTRY_HOST
+    value: "teastore-registry"
+  - name: DB_HOST
+    value: "teastore-db"
+  - name: DB_PORT
+    value: "3306"
+  startupProbe:
+    endpoint: /tools.descartes.teastore.persistence/rest/generatedb/finished

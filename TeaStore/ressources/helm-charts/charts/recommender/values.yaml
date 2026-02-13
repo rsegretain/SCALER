@@ -1,0 +1,11 @@
+progressDeadlineSeconds: 900
+container:
+  image: teastore-recommender:latest
+  port: 8080
+  env:
+  - name: HOST_NAME
+    value: "teastore-recommender"
+  - name: REGISTRY_HOST
+    value: "teastore-registry"
+  startupProbe:
+    endpoint: /tools.descartes.teastore.recommender/rest/train/isready

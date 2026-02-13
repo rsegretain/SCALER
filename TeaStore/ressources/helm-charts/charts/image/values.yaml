@@ -1,0 +1,11 @@
+progressDeadlineSeconds: 900
+container:
+  image: teastore-image:latest
+  port: 8080
+  env:
+  - name: HOST_NAME
+    value: "teastore-image"
+  - name: REGISTRY_HOST
+    value: "teastore-registry"
+  startupProbe:
+    endpoint: /tools.descartes.teastore.image/rest/image/finished

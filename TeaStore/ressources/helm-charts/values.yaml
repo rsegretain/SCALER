@@ -1,0 +1,12 @@
+global:
+  name: teastore
+  appLabel: teastore
+  containerRegistry: ##############
+  imagePullSecretsName: ################
+  cpu: "1"
+  memory: "2G"
+
+  startupProbe:
+    initialDelaySeconds: 15
+    failureThreshold: 300
+    periodSeconds: 2

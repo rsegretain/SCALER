@@ -1,0 +1,20 @@
+apiVersion: v2
+name: teastore
+version: 1.4.2
+type: application
+
+dependencies:
+  - name: registry
+    version: 1.4.2
+  - name: db
+    version: 1.4.2
+  - name: persistence
+    version: 1.4.2
+  - name: auth
+    version: 1.4.2
+  - name: image
+    version: 1.4.2
+  - name: recommender
+    version: 1.4.2
+  - name: webui
+    version: 1.4.2
